@@ -28,45 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.snake = new System.Windows.Forms.Button();
-            this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            snake = new Button();
+            gameTimer = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // snake
             // 
-            this.snake.Location = new System.Drawing.Point(351, 181);
-            this.snake.Name = "snake";
-            this.snake.Size = new System.Drawing.Size(50, 50);
-            this.snake.TabIndex = 0;
-            this.snake.UseVisualStyleBackColor = true;
+            snake.Location = new Point(401, 241);
+            snake.Margin = new Padding(3, 4, 3, 4);
+            snake.Name = "snake";
+            snake.Size = new Size(57, 67);
+            snake.TabIndex = 0;
+            snake.UseVisualStyleBackColor = true;
             // 
             // gameTimer
             // 
-            this.gameTimer.Interval = 500;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
+            gameTimer.Enabled = true;
+            gameTimer.Interval = 500;
+            gameTimer.Tick += gameTimer_Tick;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.snake);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 425);
-            this.panel1.TabIndex = 1;
+            panel1.Controls.Add(snake);
+            panel1.Location = new Point(14, 16);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(886, 567);
+            panel1.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(914, 600);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form1";
+            Text = "Form1";
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
