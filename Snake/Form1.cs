@@ -38,10 +38,8 @@ namespace Snake
             if (snake.Location.X < panel1.Bounds.Left)
                 snake.Location = new Point(panel1.Bounds.Right + snake.Size.Width, snake.Location.Y);*/
 
-            // Still could be better, but it's probably enough
-            snake.Location = new Point(
-                ((snake.Location.X + panel1.Location.X) % (panel1.Width - snake.Width)) - panel1.Location.X,
-                ((snake.Location.Y + panel1.Location.Y) % (panel1.Height - snake.Height)) - panel1.Location.Y);
+            // TODO improve that so that it doesn't clip through the panel boundary
+            snake.Location = new Point((snake.Location.X + panel1.Width) % panel1.Width, (snake.Location.Y + panel1.Height) % panel1.Height);
         }
 
         private void SpawnFruit()
