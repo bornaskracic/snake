@@ -24,6 +24,8 @@ namespace Snake
 
             // Move logic
 
+            // Imeplemented everything that needs tobe done
+
         }
 
         private void CheckBoundaries()
